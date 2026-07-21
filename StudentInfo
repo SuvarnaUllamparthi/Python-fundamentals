@@ -1,0 +1,58 @@
+def main():
+    print("=== Student Information Entry ===")
+    
+    # 1. Gather Input
+    name = input("Enter Student Name: ").strip()
+    
+    # Simple input loop to ensure age is entered as a number
+    while True:
+        try:
+            age = int(input("Enter Age: "))
+            if age > 0:
+                break
+            print("Please enter a valid age above 0.")
+        except ValueError:
+            print("Invalid input. Age must be a whole number.")
+
+    branch = input("Enter Branch/Major (e.g., CSE, ECE): ").strip()
+
+    # Simple input loop to ensure CGPA is a valid decimal between 0 and 10
+    while True:
+        try:
+            cgpa = float(input("Enter CGPA (0.0 - 10.0): "))
+            if 0.0 <= cgpa <= 10.0:
+                break
+            print("CGPA must be between 0.0 and 10.0.")
+        except ValueError:
+            print("Invalid input. CGPA must be a number.")
+
+    # 2. Display Information Cleanly
+    print("\n" + "=" * 35)
+    print("      STUDENT PROFILE CARD      ")
+    print("=" * 35)
+    print(f"  Name   : {name}")
+    print(f"  Age    : {age}")
+    print(f"  Branch : {branch}")
+    print(f"  CGPA   : {cgpa:.2f} / 10.0")
+    print("=" * 35)
+
+if __name__ == "__main__":
+    main()
+
+Output:
+=== Student Information Entry ===
+Enter Student Name: Arshiyya
+Enter Age: 19
+Enter Branch/Major (e.g., CSE, ECE): IT
+Enter CGPA (0.0 - 10.0): 8.9
+
+===================================
+      STUDENT PROFILE CARD      
+===================================
+  Name   : Arshiyya
+  Age    : 19
+  Branch : IT
+  CGPA   : 8.90 / 10.0
+===================================
+
+=== Code Execution Successful ===
