@@ -1,0 +1,9 @@
+# Prompt user for dimensions and convert text input to floating-point numbers
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+
+# Calculate area by multiplying length and width
+area = length * width
+
+# Display the calculated area using an f-string
+print(f"The area of the rectangle is: {area}")
