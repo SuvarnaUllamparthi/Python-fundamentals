@@ -1,0 +1,60 @@
+# Simple Calculator in Python
+
+print("=== Simple Calculator ===")
+print("Select an operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+
+# Get operator/choice from the user
+choice = input("\nEnter choice (+, -, *, / or 1, 2, 3, 4): ").strip()
+
+# Check if the user entered a valid operation choice
+if choice in ['+', '-', '*', '/', '1', '2', '3', '4']:
+    # Get the two numbers
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    # Perform calculation based on user choice
+    if choice in ['+', '1']:
+        result = num1 + num2
+        operation = "+"
+    elif choice in ['-', '2']:
+        result = num1 - num2
+        operation = "-"
+    elif choice in ['*', '3']:
+        result = num1 * num2
+        operation = "*"
+    elif choice in ['/', '4']:
+        # Division by zero safety check
+        if num2 == 0:
+            print("Error: Division by zero is not allowed!")
+            result = None
+        else:
+            result = num1 / num2
+            operation = "/"
+
+    # Display the result if calculation was valid
+    if result is not None:
+        print(f"\nResult: {num1} {operation} {num2} = {result}")
+
+else:
+    print("Invalid selection! Please choose a valid operator.")
+
+
+Output:
+=== Simple Calculator ===
+Select an operation:
+1. Addition (+)
+2. Subtraction (-)
+3. Multiplication (*)
+4. Division (/)
+
+Enter choice (+, -, *, / or 1, 2, 3, 4): +
+Enter first number: 4
+Enter second number: 5
+
+Result: 4.0 + 5.0 = 9.0
+
+=== Code Execution Successful ===
