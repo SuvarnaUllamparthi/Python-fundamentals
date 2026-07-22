@@ -1,0 +1,15 @@
+# Ask the user for a whole number
+num = int(input("Enter an integer: "))
+
+# Check if the number is divisible by 2 with no remainder
+if num % 2 == 0:
+    print(f"{num} is Even.")
+else:
+    print(f"{num} is Odd.")
+
+
+Output:
+Enter an integer: 5
+5 is Odd.
+
+=== Code Execution Successful ===
