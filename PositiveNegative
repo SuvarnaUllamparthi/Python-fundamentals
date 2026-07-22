@@ -1,0 +1,17 @@
+# Ask the user for a number
+num = float(input("Enter a number: "))
+
+# Check the conditions
+if num > 0:
+    print(f"{num} is Positive.")
+elif num < 0:
+    print(f"{num} is Negative.")
+else:
+    print("The number is Zero.")
+
+
+Output:
+Enter a number: 4
+4.0 is Positive.
+
+=== Code Execution Successful ===
