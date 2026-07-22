@@ -1,0 +1,38 @@
+# Grade Calculator Program
+
+try:
+    # 1. Ask the user for their score
+    score = float(input("Enter your score (0 - 100): "))
+
+    # 2. Check if the score is within a valid range
+    if score < 0 or score > 100:
+        print("Invalid score! Please enter a number between 0 and 100.")
+    else:
+        # 3. Determine the grade using conditional statements
+        if score >= 90:
+            grade = "A"
+        elif score >= 80:
+            grade = "B"
+        elif score >= 70:
+            grade = "C"
+        elif score >= 60:
+            grade = "D"
+        else:
+            grade = "Fail"
+
+        # 4. Display the result
+        print(f"\nScore: {score:.1f}%")
+        print(f"Grade: {grade}")
+
+except ValueError:
+    print("Invalid input! Please enter a valid numerical score.")
+
+
+
+Output:
+Enter your score (0 - 100): 99
+
+Score: 99.0%
+Grade: A
+
+=== Code Execution Successful ===
