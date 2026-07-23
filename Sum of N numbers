@@ -1,0 +1,11 @@
+n = int(input("Enter a positive integer (n): "))
+
+# Sum numbers from 1 to n using range
+total_sum = sum(range(1, n + 1))
+print(f"The sum of the first {n} numbers is: {total_sum}")
+
+Output:
+Enter a positive integer (n): 3
+The sum of the first 3 numbers is: 6
+
+=== Code Execution Successful ===
