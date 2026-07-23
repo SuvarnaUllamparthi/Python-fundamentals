@@ -1,0 +1,86 @@
+# BMI Calculator Program
+
+def calculate_bmi():
+    print("====================================")
+    print("           BMI CALCULATOR           ")
+    print("====================================")
+
+    # 1. Input Weight (kg)
+    while True:
+        try:
+            weight = float(input("Enter your weight in kilograms (kg): "))
+            if weight > 0:
+                break
+            print("Please enter a weight greater than 0.")
+        except ValueError:
+            print("Invalid input! Please enter a numerical value.")
+
+    # 2. Input Height (cm)
+    while True:
+        try:
+            height_cm = float(input("Enter your height in centimeters (cm): "))
+            if height_cm > 0:
+                break
+            print("Please enter a height greater than 0.")
+        except ValueError:
+            print("Invalid input! Please enter a numerical value.")
+
+    # 3. Calculations
+    height_m = height_cm / 100  # Convert cm to meters
+    bmi = weight / (height_m ** 2)
+
+    # 4. Determine Category
+    if bmi < 18.5:
+        category = "Underweight"
+    elif 18.5 <= bmi <= 24.9:
+        category = "Normal Weight"
+    elif 25.0 <= bmi <= 29.9:
+        category = "Overweight"
+    elif 30.0 <= bmi <= 34.9:
+        category = "Obese Class 1"
+    elif 35.0 <= bmi <= 39.9:
+        category = "Obese Class 2"
+    else:
+        category = "Obese Class 3 (Severe)"
+
+    # Healthy weight range calculation for the given height
+    min_healthy_weight = 18.5 * (height_m ** 2)
+    max_healthy_weight = 24.9 * (height_m ** 2)
+
+    # 5. Display Results
+    print("\n" + "=" * 36)
+    print("           YOUR RESULTS             ")
+    print("=" * 36)
+    print(f"  Height        : {height_cm:.1f} cm ({height_m:.2f} m)")
+    print(f"  Weight        : {weight:.1f} kg")
+    print(f"  BMI Score     : {bmi:.1f}")
+    print(f"  Category      : {category}")
+    print("-" * 36)
+    print(f"  Healthy Range : {min_healthy_weight:.1f} kg - {max_healthy_weight:.1f} kg")
+    print("=" * 36)
+
+if __name__ == "__main__":
+    calculate_bmi()
+
+
+
+
+Output:
+====================================
+           BMI CALCULATOR           
+====================================
+Enter your weight in kilograms (kg): 45
+Enter your height in centimeters (cm): 157
+
+====================================
+           YOUR RESULTS             
+====================================
+  Height        : 157.0 cm (1.57 m)
+  Weight        : 45.0 kg
+  BMI Score     : 18.3
+  Category      : Underweight
+------------------------------------
+  Healthy Range : 45.6 kg - 61.4 kg
+====================================
+
+=== Code Execution Successful ===
