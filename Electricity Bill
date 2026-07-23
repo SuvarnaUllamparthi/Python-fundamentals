@@ -1,0 +1,87 @@
+# Electricity Bill Calculator
+
+def calculate_bill():
+    print("==========================================")
+    print("       ELECTRICITY BILL CALCULATOR        ")
+    print("==========================================")
+
+    # 1. Customer Details & Unit Input
+    consumer_name = input("Enter Consumer Name   : ").strip()
+    
+    while True:
+        try:
+            units = float(input("Enter Units Consumed  : "))
+            if units >= 0:
+                break
+            print("Units consumed cannot be negative. Try again.")
+        except ValueError:
+            print("Invalid input! Please enter a valid number.")
+
+    # 2. Slab Rate Structure
+    # Tier 1: 0 - 100 units   @ $0.10 / unit
+    # Tier 2: 101 - 200 units @ $0.15 / unit
+    # Tier 3: 201 - 300 units @ $0.20 / unit
+    # Tier 4: Above 300 units @ $0.25 / unit
+
+    FIXED_CHARGE = 10.00   # Fixed monthly meter/maintenance fee
+    TAX_RATE = 0.05        # 5% Tax
+
+    energy_charge = 0.0
+
+    # Calculate Energy Charge based on Slabs
+    if units <= 100:
+        energy_charge = units * 0.10
+    elif units <= 200:
+        energy_charge = (100 * 0.10) + ((units - 100) * 0.15)
+    elif units <= 300:
+        energy_charge = (100 * 0.10) + (100 * 0.15) + ((units - 200) * 0.20)
+    else:
+        energy_charge = (100 * 0.10) + (100 * 0.15) + (100 * 0.20) + ((units - 300) * 0.25)
+
+    # 3. Tax and Final Calculation
+    subtotal = energy_charge + FIXED_CHARGE
+    tax_amount = subtotal * TAX_RATE
+    total_bill = subtotal + tax_amount
+
+    # 4. Display Clean Bill Statement
+    print("\n" + "=" * 44)
+    print("             ELECTRICITY BILL             ")
+    print("=" * 44)
+    print(f" Consumer Name   : {consumer_name}")
+    print(f" Units Consumed  : {units:.1f} kWh")
+    print("-" * 44)
+    print(f" Energy Charges  : ${energy_charge:.2f}")
+    print(f" Fixed Fee       : ${FIXED_CHARGE:.2f}")
+    print(f" Subtotal        : ${subtotal:.2f}")
+    print(f" Tax (5%)        : ${tax_amount:.2f}")
+    print("-" * 44)
+    print(f" TOTAL PAYABLE   : ${total_bill:.2f}")
+    print("=" * 44)
+
+if __name__ == "__main__":
+    calculate_bill()
+
+
+
+Output:
+==========================================
+       ELECTRICITY BILL CALCULATOR        
+==========================================
+Enter Consumer Name   : Swetha
+Enter Units Consumed  : 10
+
+============================================
+             ELECTRICITY BILL             
+============================================
+ Consumer Name   : Swetha
+ Units Consumed  : 10.0 kWh
+--------------------------------------------
+ Energy Charges  : $1.00
+ Fixed Fee       : $10.00
+ Subtotal        : $11.00
+ Tax (5%)        : $0.55
+--------------------------------------------
+ TOTAL PAYABLE   : $11.55
+============================================
+
+=== Code Execution Successful ===
