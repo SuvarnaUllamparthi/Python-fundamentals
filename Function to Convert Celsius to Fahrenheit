@@ -1,0 +1,14 @@
+def celsius_to_fahrenheit(celsius):
+
+    fahrenheit = (celsius * 9 / 5) + 32
+
+    return fahrenheit
+
+print(celsius_to_fahrenheit(25))
+
+
+Output:
+77.0
+
+
+Formula:F = (C × 9/5) + 32
