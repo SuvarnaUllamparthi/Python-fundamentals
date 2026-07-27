@@ -1,0 +1,4 @@
+fruits.insert(1,"Orange")
+
+Output:
+fruits.insert(1,"Orange")
