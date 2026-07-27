@@ -1,0 +1,10 @@
+marks = [80,90,85,95]
+
+print(sum(marks))
+print(max(marks))
+print(min(marks))
+
+Output:
+350
+95
+80
