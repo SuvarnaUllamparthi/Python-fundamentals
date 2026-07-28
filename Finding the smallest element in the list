@@ -1,0 +1,13 @@
+numbers = [15, 8, 25, 3, 18]         # Create a list
+
+smallest = numbers[0]                # Assume first element is smallest
+
+for num in numbers:                  # Visit every element
+    if num < smallest:               # Compare with current smallest
+        smallest = num               # Update smallest
+
+print("Smallest:", smallest)
+
+
+Output:
+Smallest: 3
