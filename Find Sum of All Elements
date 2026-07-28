@@ -1,0 +1,12 @@
+numbers = [10, 20, 30, 40]
+
+total = 0                            # Store sum
+
+for num in numbers:                  # Visit every number
+    total += num                     # Add to total
+
+print(total)
+
+
+Output:
+100
