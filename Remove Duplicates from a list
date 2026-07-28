@@ -1,0 +1,15 @@
+numbers = [1, 2, 2, 3, 4, 4, 5]      # List with duplicates
+
+unique = []                          # Empty list
+
+for num in numbers:                  # Visit every element
+
+    if num not in unique:            # Check if already present
+
+        unique.append(num)           # Add only unique values
+
+print(unique)
+
+
+Output:
+[1, 2, 3, 4, 5]
