@@ -1,0 +1,13 @@
+numbers = [10, 20, 30, 40, 50]       # Create a list
+
+total = 0                            # Variable to store sum
+
+for num in numbers:                  # Visit every number
+    total += num                     # Add each number to total
+
+average = total / len(numbers)       # Divide total by number of elements
+
+print("Average:", average)
+
+Output:
+Average: 30.0
