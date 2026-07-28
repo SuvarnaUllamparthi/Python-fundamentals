@@ -1,0 +1,9 @@
+numbers = [15, 8, 25, 3, 18]         # Create a list
+
+numbers.sort()                       # Sort in ascending order
+
+print("Second Largest:", numbers[-2])# Second last element
+
+
+Output:
+Second Largest: 18
