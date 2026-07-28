@@ -1,0 +1,15 @@
+numbers = [10, 15, 20, 25, 30]       # Create a list
+
+count = 0                            # Counter
+
+for num in numbers:                  # Visit every element
+
+    if num % 2 != 0:                 # Odd numbers leave remainder 1
+
+        count += 1
+
+print("Odd numbers:", count)
+
+
+Output:
+Odd numbers: 2
