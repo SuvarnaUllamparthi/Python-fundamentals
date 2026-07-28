@@ -1,0 +1,12 @@
+numbers = [15, 8, 25, 3, 18]         # Create a list
+
+largest = numbers[0]                 # Assume first element is largest
+
+for num in numbers:                  # Check every element
+    if num > largest:                # Is current element bigger?
+        largest = num                # Update largest value
+
+print("Largest:", largest)           # Print result
+
+Output:
+Largest: 25
