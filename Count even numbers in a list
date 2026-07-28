@@ -1,0 +1,15 @@
+numbers = [10, 15, 20, 25, 30]       # Create a list
+
+count = 0                            # Counter
+
+for num in numbers:                  # Visit each element
+
+    if num % 2 == 0:                 # Check if divisible by 2
+
+        count += 1                   # Increase counter
+
+print("Even numbers:", count)
+
+
+Output:
+Even numbers: 3
