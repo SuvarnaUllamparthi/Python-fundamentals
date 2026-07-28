@@ -1,0 +1,11 @@
+numbers = [10, 20, 30, 40, 50]      # Create a list
+
+for num in numbers:                 # Visit each element one by one
+    print(num)                      # Print the current element
+
+Output:
+10
+20
+30
+40
+50
