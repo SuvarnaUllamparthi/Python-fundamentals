@@ -1,0 +1,11 @@
+list1 = [1, 2, 3]                    # First list
+
+list2 = [4, 5, 6]                    # Second list
+
+merged = list1 + list2               # Join both lists
+
+print(merged)
+
+
+Output:
+[1, 2, 3, 4, 5, 6]
