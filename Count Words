@@ -1,0 +1,13 @@
+def count_words(sentence):
+
+    words = sentence.split()
+
+    return len(words)
+
+text = input("Enter Sentence: ")
+
+print("Words =", count_words(text))
+
+Output:
+Enter Sentence: Pack my box with five dozen liquor jugs
+Words = 8
