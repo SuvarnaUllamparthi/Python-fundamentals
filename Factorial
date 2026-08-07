@@ -1,0 +1,17 @@
+def factorial(n):
+
+    fact = 1
+
+    for i in range(1, n + 1):
+        fact *= i
+
+    return fact
+
+num = int(input("Enter Number: "))
+
+print("Factorial =", factorial(num))
+
+
+Output:
+Enter Number: 55
+Factorial = 12696403353658275925965100847566516959580321051449436762275840000000000000
