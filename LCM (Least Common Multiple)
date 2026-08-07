@@ -1,0 +1,20 @@
+def gcd(a, b):
+
+    while b != 0:
+        a, b = b, a % b
+
+    return a
+
+def lcm(a, b):
+
+    return (a * b) // gcd(a, b)
+
+num1 = int(input("Enter First Number: "))
+num2 = int(input("Enter Second Number: "))
+
+print("LCM =", lcm(num1, num2))
+
+Output:
+Enter First Number: 5
+Enter Second Number: 6
+LCM = 30
