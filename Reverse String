@@ -1,0 +1,11 @@
+def reverse(text):
+
+    return text[::-1]
+
+word = input("Enter String: ")
+
+print("Reversed String =", reverse(word))
+
+Output:
+Enter String: 878fedrs
+Reversed String = srdef878
