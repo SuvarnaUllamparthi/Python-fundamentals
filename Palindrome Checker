@@ -1,0 +1,13 @@
+def palindrome(text):
+    return text == text[::-1]
+
+word = input("Enter String: ")
+
+if palindrome(word):
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+Output:
+Enter String: 4564654
+Palindrome
