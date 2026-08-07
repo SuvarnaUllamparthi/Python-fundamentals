@@ -1,0 +1,19 @@
+def count_vowels(text):
+
+    count = 0
+
+    vowels = "aeiouAEIOU"
+
+    for letter in text:
+
+        if letter in vowels:
+            count += 1
+
+    return count
+
+sentence = input("Enter String: ")
+
+print("Vowels =", count_vowels(sentence))
+
+Enter String: "The quick brown fox jumps over the lazy dog.
+Vowels = 11
