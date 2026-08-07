@@ -1,0 +1,27 @@
+def calculate_grade(marks):
+
+    if marks >= 90:
+        return "A"
+
+    elif marks >= 80:
+        return "B"
+
+    elif marks >= 70:
+        return "C"
+
+    elif marks >= 60:
+        return "D"
+
+    else:
+        return "Fail"
+
+marks = float(input("Enter Marks: "))
+
+grade = calculate_grade(marks)
+
+print("Grade =", grade)
+
+
+Output:
+Enter Marks: 99
+Grade = A
